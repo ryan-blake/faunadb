@@ -5,7 +5,7 @@ import TableRow from '../components/TableRow'
 export default () => {
   const [data, setData] = useState([])
 
-  returnData = (data) => {
+  function returnData(data) {
     console.log(data)
   }
   useEffect(() => {
