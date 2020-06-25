@@ -40,9 +40,8 @@ export default () => {
                 firstName={d.data.firstName}
                 lastName={d.data.lastName}
                 telephone={d.data.telephone}
-                id={d}
+                id={d["id"]}
               />
-              this.returnData(d)
             ))
           ) : (
             <>
