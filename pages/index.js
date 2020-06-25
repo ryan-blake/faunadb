@@ -15,7 +15,7 @@ export default () => {
   return (
     <main>
       <Head>
-        <title>Next.js, FaunaDB and Node.js</title>
+        <title>Next.js, FaunaDB and NodeJS</title>
       </Head>
       <h1>Next.js, FaunaDB and Node.js</h1>
       <hr />
