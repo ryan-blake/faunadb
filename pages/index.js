@@ -36,7 +36,7 @@ export default () => {
                 firstName={d.data.firstName}
                 lastName={d.data.lastName}
                 telephone={d.data.telephone}
-                id={d.data.id}
+                id={d.id}
               />
             ))
           ) : (
