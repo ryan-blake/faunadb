@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import TableRow from '../components/TableRow'
+import {editName} from './api/editName'
 
 export default () => {
   const [data, setData] = useState([])
@@ -8,6 +9,8 @@ export default () => {
   function returnData(data) {
     console.log(data)
   }
+
+
   useEffect(() => {
     async function getData() {
       const res = await fetch('/api')
@@ -15,7 +18,7 @@ export default () => {
       setData(newData)
       console.log(JSON.stringify(newData[0]))
       console.log(JSON.stringify(newData[0].ref))
-      console.log(JSON.stringify(newData[0].ref['@ref']))
+      console.log(JSON.stringify(newData[0].ref['@ref'].id))
     }
     getData()
   }, [])
@@ -42,7 +45,7 @@ export default () => {
                 firstName={d.data.firstName}
                 lastName={d.data.lastName}
                 telephone={d.data.telephone}
-                id={d[0]}
+                id={d.ref['@ref'].id}
               />
             ))
           ) : (
