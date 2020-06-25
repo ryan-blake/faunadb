@@ -4,6 +4,10 @@ import TableRow from '../components/TableRow'
 
 export default () => {
   const [data, setData] = useState([])
+
+  returnData = (data) => {
+    console.log(data)
+  }
   useEffect(() => {
     async function getData() {
       const res = await fetch('/api')
@@ -36,8 +40,9 @@ export default () => {
                 firstName={d.data.firstName}
                 lastName={d.data.lastName}
                 telephone={d.data.telephone}
-                id={d.id}
+                id={d}
               />
+              this.returnData(d)
             ))
           ) : (
             <>
