@@ -13,7 +13,9 @@ export default () => {
       const res = await fetch('/api')
       const newData = await res.json()
       setData(newData)
-      console.log(JSON.stringify(newData))
+      console.log(JSON.stringify(newData[0]))
+      console.log(JSON.stringify(newData[0][1]))
+      console.log(JSON.stringify(newData[0].id))
     }
     getData()
   }, [])
@@ -40,7 +42,7 @@ export default () => {
                 firstName={d.data.firstName}
                 lastName={d.data.lastName}
                 telephone={d.data.telephone}
-                id={d["id"]}
+                id={d[0]}
               />
             ))
           ) : (
