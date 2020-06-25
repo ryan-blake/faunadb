@@ -14,8 +14,8 @@ export default () => {
       const newData = await res.json()
       setData(newData)
       console.log(JSON.stringify(newData[0]))
-      console.log(JSON.stringify(newData[0].ref.id))
-      console.log(JSON.stringify(newData[0].red['id']))
+      console.log(JSON.stringify(newData[0].ref))
+      console.log(JSON.stringify(newData[0].ref['@ref']))
     }
     getData()
   }, [])
