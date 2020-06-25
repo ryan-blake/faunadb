@@ -9,6 +9,7 @@ export default () => {
       const res = await fetch('/api')
       const newData = await res.json()
       setData(newData)
+      console.log(JSON.stringify(newData))
     }
     getData()
   }, [])
